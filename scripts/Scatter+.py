@@ -10,7 +10,10 @@ if not "Scattered" in obj:
     locations = [
     [[-76.9175,5.2857,0],[0,0,0]],
     [[-72.948,5.6023,0],[0,0,0]],
+    [[0,0,0],[0,0,0]],
     ]
 
     for location in locations:
-        scene.addObject('ZombieMaster', obj).worldPosition = location[0]
+        newZombie = scene.addObject('ZombieMaster', obj)
+        newZombie.worldPosition = location[0]
+        newZombie.worldOrientation = location[1]
