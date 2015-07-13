@@ -24,7 +24,6 @@ AttachHeightLocal = 0.0
 Stability = 0.027
 
 
-
 ## This is called from the car object
 def carInit():
 
