@@ -2,9 +2,9 @@
 Radish's Zombie Game
 
 ###Contents
-- [Installation](#Installation)
-- [History](#History)
-- [Chat](#Chat)
+- [Installation](#installation)
+- [History](#history)
+- [Chat](#chat)
 
 #Installation
 
