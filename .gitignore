@@ -24,6 +24,9 @@ docs/_build/
 *.blend1
 *.blend2
 
+#PSD Files
+*.psd
+*.psd
 
 # Windows system files
 Thumbs.db
