@@ -1,4 +1,3 @@
-import GameLogic
 from bge import logic
 
 scene = logic.getCurrentScene()        # Get the current game scene
