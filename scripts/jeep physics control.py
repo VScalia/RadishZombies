@@ -7,6 +7,11 @@ import GameKeys as K
 import Rasterizer as R
 import math
 
+import bge
+
+scene = bge.logic.getCurrentScene()
+objects = scene.objects
+
 ## this is for older versions but it still works. 
 ## Set specific vehicle characteristics ##
 scaleFactor = 2.5 #This should match the scale of the jeep objects
@@ -134,41 +139,41 @@ def carHandler():
 
 ## called from main car object
 def keyHandler():
-	cont = G.getCurrentController()
-	keys = cont.sensors["key"].events
-	for key in keys:
-		## up arrow
-		if   key[0] == K.UPARROWKEY:
-			G.car["force"]  = -15.0
-		## down arrow
-		elif key[0] == K.DOWNARROWKEY:
-			G.car["force"]  = 10.0
-		## right arrow
-		elif key[0] == K.RIGHTARROWKEY:
-			G.car["steer"] -= 0.05
-		## left arrow
-		elif key[0] == K.LEFTARROWKEY:
-			G.car["steer"] += 0.05
-		## R
-		elif key[0] == K.RKEY:
-			if key[1] == 1:
-				# re-orient car
-				if G.car["jump"] > 2.0:
-					G.car.position = (G.car.worldPosition[0], G.car.worldPosition[1], G.car.worldPosition[2]+3.0)
-					G.car.alignAxisToVect([0.0,0.0,1.0], 2, 1.0)
-					G.car.setLinearVelocity([0.0,0.0,0.0],1)
-					G.car.setAngularVelocity([0.0,0.0,0.0],1)
-					G.car["jump"] = 0
-		## Spacebar
-		elif key[0] == K.SPACEKEY:
-			# hackish Brake
-			if G.car["speed"] > 2.0:
-				G.car["force"]  = 20.0
-			if G.car["speed"] < -2.0:
-				G.car["force"]  = -20.0
-
-
-
+	
+	active = objects["Camera Control"]['Active car']
+	if active:
+		cont = G.getCurrentController()
+		keys = cont.sensors["key"].events
+		for key in keys:
+			## up arrow
+			if   key[0] == K.UPARROWKEY:
+				G.car["force"]  = -15.0
+			## down arrow
+			elif key[0] == K.DOWNARROWKEY:
+				G.car["force"]  = 10.0
+			## right arrow
+			elif key[0] == K.RIGHTARROWKEY:
+				G.car["steer"] -= 0.05
+			## left arrow
+			elif key[0] == K.LEFTARROWKEY:
+				G.car["steer"] += 0.05
+			## R
+			elif key[0] == K.RKEY:
+				if key[1] == 1:
+					# re-orient car
+					if G.car["jump"] > 2.0:
+						G.car.position = (G.car.worldPosition[0], G.car.worldPosition[1], G.car.worldPosition[2]+3.0)
+						G.car.alignAxisToVect([0.0,0.0,1.0], 2, 1.0)
+						G.car.setLinearVelocity([0.0,0.0,0.0],1)
+						G.car.setAngularVelocity([0.0,0.0,0.0],1)
+						G.car["jump"] = 0
+			## Spacebar
+			elif key[0] == K.SPACEKEY:
+				# hackish Brake
+				if G.car["speed"] > 2.0:
+					G.car["force"]  = 20.0
+				if G.car["speed"] < -2.0:
+					G.car["force"]  = -20.0
 
 
 ## called from Menu Camera
