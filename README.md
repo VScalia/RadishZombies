@@ -1,8 +1,21 @@
 # RadishZombies
 Radish's Zombie Game
 
-I’ve actually never done this before, but the cow and others have. (Btw this is radish talking) we're working on a game in Blender 3D's game engine, partially just to prove that Yes, blender does have one.
-This game is focused around a cube that wields a Gatling gun to cut down opposing forces the "Zombies" the ""'s are there, cause they aren't really zombies, just little green cubes that have obscene pleasure in chewing on faces.
-Thanks to X-27 for the jeep... we will try to get it in all the way... Right now we are undergoing major re-org because previously i had done it, and my organizational skills (lack thereof) are absolutely legendary.
-Follow progress in this SE chat room: http://chat.stackexchange.com/rooms/25789/radish-zombie-game
+###Contents
+- [Installation](#Installation)
+- [History](#History)
+- [Chat](#Chat)
 
+#Installation
+
+Download all the files into one place, open game master. You will need to select layers (left to right, top to bottom) 1,2,10,11 and 20.
+
+#History
+
+Radish made a zombie game, and cow played the game. Cow liked it, and requested the express implementation of a jeep, in order to blow up zombies more vigorously. Radish called on X-27 to implement the jeep, which promptly failed to integrate. Cow and Radish tried, and soon many others were working on it, so it was added to GitHub, in order to make the chaos give some semblance of order.
+
+#Chat
+
+This is where we disorganize the project:
+
+http://chat.stackexchange.com/rooms/25789/radish-zombie-game
