@@ -15,25 +15,18 @@ if not "Scattered" in obj:
     [[58.2994,50.9079,0],[0,0,0],'ZombieMaster'],
     [[29.8511,162.6793,0],[0,0,0],'ZombieMaster'],
     [[2,2,0],[0,0,0],'jerryCan'],
-    [[2,4,0],[0,0,0],'jerryCan'],
-    [[2,6,0],[0,0,0],'jerryCan'],
-    [[2,8,0],[0,0,0],'jerryCan'],
-    [[2,2,0],[0,0,0],'MP_Physics_(AddThis)'],
-    [[2,4,0],[0,0,0],'MP_Physics_(AddThis)'],
-    [[2,6,0],[0,0,0],'MP_Physics_(AddThis)'],
-    [[2,8,0],[0,0,0],'MP_Physics_(AddThis)'],
-    [[2,10,0],[0,0,0],'MP_Physics_(AddThis)'],
-    [[4,2,0],[0,0,0],'ammoCrate'],
-    [[4,4,0],[0,0,0],'ammoCrate'],
-    [[4,6,0],[0,0,0],'ammoCrate'],
     [[-13.6,-55,0],[0,0,0],'syrynge'],
     [[-101.7,-34.1,0],[0,0,0],'syrynge'],
     [[-18.6,-52.6,0],[0,0,0],'ammoCrate'],
     [[-35,-8.6,0],[0,0,0],'ammoCrate'],
     [[-88.3,-52.4,0],[0,0,0],'ammoCrate']
+    [[5,5,0],[0,0,0],'MP_Main']
     ]
 
     for location in locations:
-        newZombie = scene.addObject(location[2], obj)
-        newZombie.worldPosition = location[0]
-        newZombie.worldOrientation = location[1]
+        newItem = scene.addObject(location[2], obj)
+        newItem.worldPosition = location[0]
+        newItem.worldOrientation = location[1]
+        for newItemChild  in newItem.childrenRecursive
+        newItemChild.worldPosition = location[0]
+        newItemChild.worldOrientation = location[1]
