@@ -19,14 +19,16 @@ if not "Scattered" in obj:
     [[-101.7,-34.1,0],[0,0,0],'syrynge'],
     [[-18.6,-52.6,0],[0,0,0],'ammoCrate'],
     [[-35,-8.6,0],[0,0,0],'ammoCrate'],
-    [[-88.3,-52.4,0],[0,0,0],'ammoCrate']
-    [[5,5,0],[0,0,0],'MP_Main']
+    [[-88.3,-52.4,0],[0,0,0],'ammoCrate'],
+    [[5,5,0],[0,0,0],'MP_Main'],
+    [[5,10,0],[0,0,0],'MP_Main']
     ]
 
     for location in locations:
         newItem = scene.addObject(location[2], obj)
         newItem.worldPosition = location[0]
         newItem.worldOrientation = location[1]
-        for newItemChild  in newItem.childrenRecursive
-        newItemChild.worldPosition = location[0]
-        newItemChild.worldOrientation = location[1]
+        print(newItem.childrenRecursive)
+        for newItemChild  in newItem.childrenRecursive:
+            newItemChild.worldPosition = location[0]
+            newItemChild.worldOrientation = location[1]
