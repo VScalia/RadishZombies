@@ -1,4 +1,4 @@
 import GameLogic
 from bge import logic
 
-GameLogic.track = 'bare'
+bge.logic.track = 'bare'
