@@ -1,4 +1,7 @@
 import GameLogic
 from bge import logic
 
-logic.track = 'bare'
+def Mount():
+    logic.track = 'bare'
+def Dismount():
+    logic.track = 'player'
