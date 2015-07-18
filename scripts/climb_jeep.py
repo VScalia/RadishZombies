@@ -20,7 +20,7 @@ def inJeep():
 def outJeep():
     player.visible = True
     
-    player.worldOrientation =  jeep.worldOrientation
+    player.worldOrientation[2] =  jeep.worldOrientation[2]
     
     jp = jeep.localPosition
     
