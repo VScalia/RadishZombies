@@ -7,8 +7,6 @@ scene = bge.logic.getCurrentScene()
 player = scene.objects["player"]
 jeep = scene.objects["bare"]
 
-offsetFromJeep = [3.5,1]
-
 def inJeep():
     player.visible = False
     #Temporary fix to return the player to previous location.
@@ -29,4 +27,3 @@ def outJeep():
     player.localPosition = [jp[0] - 3.0, jp[1], jp[2]]
     
     player.restoreDynamics()
-    player.enableRigidBody()
