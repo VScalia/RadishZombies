@@ -14,15 +14,16 @@ def inJeep():
     player.worldPosition = [0,  0, -50]
     player.suspendDynamics()
     player.disableRigidBody()
+    print("player called from state 2 ,in jeep")
 
 
 def outJeep():
     player.visible = True
-
-    player.worldOrientation = [0.0, 0.0, jeep.worldOrientation.to_euler()[2]]
-
+    
+    player.worldOrientation[2] =  jeep.worldOrientation[2]
+    
     jp = jeep.localPosition
+    
     player.localPosition = [jp[0] - 3.0, jp[1], jp[2]]
-
+    
     player.restoreDynamics()
-    player.enableRigidBody()
