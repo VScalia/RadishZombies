@@ -4,18 +4,19 @@ scene = logic.getCurrentScene()        # Get the current game scene
 cont = logic.getCurrentController() # Get the controller executing this 
 owner = cont.owner                       # Get this object
 
-zombieRoof = 300
+zombieRoof = 100
 
-newZombieCount = owner["zombiecount"] * 1.1
-newZombieCount = int(newZombieCount + 1)
-addZombieCount = newZombieCount - (owner["zombiecount"])
-if newZombieCount >= zombieRoof:
-	addZombieCount = addZombieCount - (newZombieCount - zombieRoof)
+skips = (owner["zombiecount"] - zombieRoof)/8
 
-print(newZombieCount)
-# print(addZombieCount)
-for x in range(0,addZombieCount):
-	newZombieClone = scene.addObject('zombieClone', owner)
-	owner["zombiecount"] += 1
+print(logic.skips)
+print(skips)
 
-#GiantCowFilms
+if logic.skips <= 0:
+	logic.skips = skips
+
+	if owner["zombiecount"] < zombieRoof:
+		newZombieClone = scene.addObject('zombieClone', owner)
+		owner["zombiecount"] += 1
+else:
+	logic.skips = logic.skips - 1
+
