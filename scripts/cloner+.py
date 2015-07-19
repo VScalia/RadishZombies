@@ -4,9 +4,9 @@ scene = logic.getCurrentScene()        # Get the current game scene
 cont = logic.getCurrentController() # Get the controller executing this 
 owner = cont.owner                       # Get this object
 
-zombieRoof = 100
+zombieRoof = 150
 
-skips = (owner["zombiecount"] - zombieRoof)/8
+skips = int((50 - owner["zombiecount"])/12)
 
 print(logic.skips)
 print(skips)
