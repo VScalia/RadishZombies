@@ -6,7 +6,7 @@ owner = cont.owner                       # Get this object
 
 zombieRoof = 300
 
-newZombieCount = owner["zombiecount"] * 1.02
+newZombieCount = owner["zombiecount"] * 1.1
 newZombieCount = int(newZombieCount + 1)
 addZombieCount = newZombieCount - (owner["zombiecount"])
 if newZombieCount >= zombieRoof:
