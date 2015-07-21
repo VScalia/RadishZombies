@@ -15,11 +15,11 @@ objects = scene.objects
 ## this is for older versions but it still works. 
 ## Set specific vehicle characteristics ##
 scaleFactor = 2.5 #This should match the scale of the jeep objects
-suspensionLength = .6 * scaleFactor
-wheelRadius = 0.3875 * scaleFactor
-wheelBaseWide = 0.6 * scaleFactor
-wheelFrontOffset = 1.17 * scaleFactor
-wheelBackOffset = -0.867 * scaleFactor
+suspensionLength = .6
+wheelRadius = 0.3875
+wheelBaseWide = 0.6
+wheelFrontOffset = 1.17
+wheelBackOffset = -0.867
 influence = 0.05
 stiffness = 50.0
 damping = 1.0
@@ -27,6 +27,7 @@ compression = 7.0
 friction = 75.0
 AttachHeightLocal = 0.0
 Stability = 0.027
+0
 
 
 ## This is called from the car object
@@ -158,7 +159,7 @@ def keyHandler():
 			elif key[0] == K.LEFTARROWKEY:
 				G.car["steer"] += 0.05
 			## R
-			elif key[0] == K.RKEY:
+			elif key[0] == K.FKEY:
 				if key[1] == 1:
 					# re-orient car
 					if G.car["jump"] > 2.0:
