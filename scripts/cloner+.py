@@ -1,5 +1,5 @@
 from bge import logic
-import math
+
 scene = logic.getCurrentScene()        # Get the current game scene
 cont = logic.getCurrentController() # Get the controller executing this 
 owner = cont.owner                       # Get this object
@@ -19,4 +19,3 @@ if logic.skips <= 0:
 		owner["zombiecount"] += 1
 else:
 	logic.skips = logic.skips - 1
-
