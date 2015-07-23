@@ -76,7 +76,7 @@ def cloner():
         bge.logic.skips = bge.logic.skips - 1
     
 
-def scatter():
+def track():
     cont = bge.logic.getCurrentController()
     objectToTrack = scene.objects[bge.logic.track]
     track = cont.actuators[0]
