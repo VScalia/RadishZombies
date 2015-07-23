@@ -1,5 +1,5 @@
 #
-# Each text object you want this script to change the resolution of needs to have "Text" in the name. Not a problem here because nothing is named.
+# Each text object you want this script to change the resolution of needs to have "Text" in the name. Not a problem here because nothing is named. :)
 # Only run once from the camera ("Camera.002") in the player file.
 #
 
