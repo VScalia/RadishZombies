@@ -1,12 +1,12 @@
 #
-# Add a game property of "text" to each text object you want this script to change the resolution.
+# Each text object you want this script to change the resolution of needs to have "Text" in the name. Not a problem here because nothing is named. :)
 # Only run once from the camera ("Camera.002") in the player file.
 #
 
 import bge
 scene = bge.logic.getCurrentScene()
 
-# Loops through all the objects, loking for the property "text"
+# Loops through all the objects, looking for "Text" in the name
 for obj in scene.objects:
-	if "text" in obj:
+	if "Text" in obj.name:
 		obj.resolution = 8.0
