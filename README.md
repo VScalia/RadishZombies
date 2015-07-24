@@ -3,6 +3,8 @@ Radish's Zombie Game
 
 ###Contents
 - [Installation](#installation)
+- [Gameplay instructions](https://github.com/VScalia/RadishZombies/blob/master/INSTRUCTIONS.md)
+- [Dev log](#dev-log)
 - [History](#history)
 - [Chat](#chat)
 
