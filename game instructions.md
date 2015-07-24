@@ -37,7 +37,9 @@ If the jeep's fuel tank is above 25 fuel points, and there is no spare can, a ne
 If the jeep's fuel tank is below 50 fuel points, and there already is a spare can, 50 fuel points will be added to the gas tank.
 If the jeep's fuel tank is above 50 fuel points, and there already is a spare can, the fuel tank will be filled, and the rest will be watsed.
 
+When the jeep's fuel reaches 0, it will not drive, and you can only sit there or dismount.
 
+You may get more fuel to the jeep to revive it.
 
 The jeep's armor, for a very strage reason (I would have made it differnetly) can only be damaged when the player is in the jeep, and the jeep is out of fuel.
 When the jeep's armor reaches 0, the jeep will explode, you will be ejected, and you will not be able to re-enter.
