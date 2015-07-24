@@ -16,6 +16,8 @@ The third will be 1 if you have a grenade to throw, and 0 if you do not.
 The fourth number is how many newly spawned zombies you have killed. (The ones occupying the level at the start do not count)
 
 
+You may not drive the jeep unless you are in it.
+
     When in the jeep:
 Arrow Keys drive. Space is handbreak. Comma Fires a missle. You must be going Below 10 speed to fire a missile. Drive into the palets containing missiles to reload the missile launcher.
 W and S aim the missile luncher up and down. One pallet of missiles will fill the launcher and be used, regarddless of how many missiles are actually added to the launcher, if any. (Only pick up if you reallly need them)
