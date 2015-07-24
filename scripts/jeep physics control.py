@@ -14,7 +14,7 @@ objects = scene.objects
 
 ## this is for older versions but it still works. 
 ## Set specific vehicle characteristics ##
-scaleFactor = 2.5 #This should match the scale of the jeep objects
+scaleFactor = 1 #This should match the scale of the jeep objects
 suspensionLength = .6 * scaleFactor
 wheelRadius = 0.3875 * scaleFactor
 wheelBaseWide = 0.6 * scaleFactor
