@@ -24,6 +24,7 @@ Arrow Keys drive. Space is handbrake. Comma Fires a missile. You must be going B
 W and S aim the missile luncher up and down. One pallet of missiles will fill the launcher and be used, regardless of how many missiles are actually added to the launcher, if any. (Only pick up if you really need them)
 Missiles have a much larger blast radios than the grenades. the will also destroy everything within the radios of the blast, zombies and pick-ups alike. 
 Hint: The missiles are very powerful and should only be used as a last defence, escaping from a corner, or for clearing heavily grouped mobs of zombies.
+If you filp the jeep, press F for Flipped to reset it.
 
 ####The Jeep's fuel system works as follows: 
 
