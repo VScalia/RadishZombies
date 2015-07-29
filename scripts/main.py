@@ -59,14 +59,14 @@ def outJeep():
 def cloner():
 	scene = bge.logic.getCurrentScene()        # Get the current game scene
 	cont = bge.logic.getCurrentController() # Get the controller executing this 
-	owner = bge.cont.owner                       # Get this object
+	owner = cont.owner                       # Get this object
 
 	zombieRoof = 150
 
 	skips = int((50 - bge.logic.zombieCount)/12)
 
-	print(bge.logic.skips)
-	print(skips)
+	print(bge.logic.skips, "cloner")
+	print(skips, "cloner")
 
 	if bge.logic.skips <= 0:
 		bge.logic.skips = skips
@@ -74,8 +74,9 @@ def cloner():
 		if bge.logic.zombieCount < zombieRoof:
 			newZombieClone = scene.addObject('zombieClone', owner)
 			bge.logic.zombieCount += 1
-else:
-	bge.logic.skips = bge.logic.skips - 1
+			print(bge.logic.zombieCount, "zombieCount")
+	else:
+		bge.logic.skips = bge.logic.skips - 1
     
 
 def track():
