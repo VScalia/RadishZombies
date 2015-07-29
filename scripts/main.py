@@ -7,6 +7,7 @@ scene = bge.logic.getCurrentScene()
 def init():
 	bge.logic.track = 'player'
 	bge.logic.skips = 0
+	bge.logic.zombieCount = 1
 
 
 def menu_web_link():
@@ -56,24 +57,25 @@ def outJeep():
 
 
 def cloner():
+	scene = bge.logic.getCurrentScene()        # Get the current game scene
 	cont = bge.logic.getCurrentController() # Get the controller executing this 
-	owner = cont.owner # Get this object
+	owner = bge.cont.owner                       # Get this object
 
 	zombieRoof = 150
 
-	skips = int((50 - owner["zombiecount"])/12)
+	skips = int((50 - bge.logic.zombieCount)/12)
 
-	print(bge.logic.skips, "cloner")
-	print(skips, "cloner")
+	print(bge.logic.skips)
+	print(skips)
 
 	if bge.logic.skips <= 0:
 		bge.logic.skips = skips
 
-	if owner["zombiecount"] < zombieRoof:
-		newZombieClone = scene.addObject('zombieClone', owner)
-		owner["zombiecount"] += 1
-	else:
-		bge.logic.skips = bge.logic.skips - 1
+		if bge.logic.zombieCount < zombieRoof:
+			newZombieClone = scene.addObject('zombieClone', owner)
+			bge.logic.zombieCount += 1
+else:
+	bge.logic.skips = bge.logic.skips - 1
     
 
 def track():
@@ -82,3 +84,6 @@ def track():
 	track = cont.actuators[0]
 	track.target = objectToTrack
 	cont.activate(track)
+def killZombie():
+    bge.logic.zombieCount -= 1
+    
