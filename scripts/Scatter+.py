@@ -54,8 +54,8 @@ if not "Scattered" in obj:
     [[5,5,0],[0,0,0],'MP_Main'],
     [[5,10,0],[0,0,0],'MP_Main']
     ]
-
-    for location in locations:
+	#Needs to be updated for more levels
+    for location in locations["level1"]:
         newItem = scene.addObject(location[2], obj)
         newItem.worldPosition = location[0]
         newItem.worldOrientation = location[1]
