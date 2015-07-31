@@ -50,7 +50,7 @@ When the Jeep's armor reaches 0, the Jeep will explode, you will be ejected, and
 
 Do not drive into deep water, for this Jeep has no snorkel and the Jeep will drown (you will be ejected and will not be able to re-enter)
 
-##The goal of the game is to survive as long as possible.
+##The goal of the game is to survive as long as possible, and kill the largest amount of zombies.
 
 
 
