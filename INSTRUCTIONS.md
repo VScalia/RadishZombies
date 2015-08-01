@@ -5,7 +5,7 @@ W A S D Moves the player. Use the mouse to aim. Left Click Fires. Right Click ju
 Pressing R uses one of your ammo refills, and sets your ammo to 55. Only use this when your ammo is low or empty, because it will use an entire ammo refill regardless of how much ammo is actually added to your clip.
 The mini gun will not automatically re-load!
 Press G to throw a grenade. They will detonate shortly after hitting the ground, destroying all pick-ups & zombies within the blast radios. You only have one grenade per ammo box. You do not start with a grenade.
-Pick up the small ammo boxes to add one more ammo refill to your player, and add one grenade. You can only hold one grenade at a time, any more collected grenades will be lost.
+Pick up the small ammo boxes to add one more ammo refill to your player, and add one grenade. You can only hold no more than seven grenades at a time, any more collected grenades will be lost.
 Pick up a syringe to restore all of your health. Again, the syringe will be used regardless of how much health is actually restored.
 Walk up to the driver side of the Jeep, press E to enter it, and E to dismount again.
 Walking into water slows down the player. 
