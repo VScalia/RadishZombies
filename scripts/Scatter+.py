@@ -7,7 +7,7 @@ obj = cont.owner                         # Get this object
 
 if not "Scattered" in obj:
     obj["Scattered"] = True
-    locations = ["level1"]
+    locations = {}
     locations["level1"] = [
     [[-76.9175,5.2857,-0.6],[0,0,0],'ZombieMaster'],
     [[-72.948,5.6023,-0.6],[0,0,0],'ZombieMaster'],
