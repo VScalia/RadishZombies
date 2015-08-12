@@ -141,9 +141,9 @@ def carHandler():
 def keyHandler():
 	
 	active = objects["Camera Control"]['Active car']
+	cont = G.getCurrentController()
+	keys = cont.sensors["key"].events
 	if active:
-		cont = G.getCurrentController()
-		keys = cont.sensors["key"].events
 		for key in keys:
 			## up arrow
 			if   key[0] == K.UPARROWKEY:
@@ -157,16 +157,6 @@ def keyHandler():
 			## left arrow
 			elif key[0] == K.LEFTARROWKEY:
 				G.car["steer"] += 0.05
-			## R
-			elif key[0] == K.FKEY:
-				if key[1] == 1:
-					# re-orient car
-					if G.car["jump"] > 2.0:
-						G.car.position = (G.car.worldPosition[0], G.car.worldPosition[1], G.car.worldPosition[2]+3.0)
-						G.car.alignAxisToVect([0.0,0.0,1.0], 2, 1.0)
-						G.car.setLinearVelocity([0.0,0.0,0.0],1)
-						G.car.setAngularVelocity([0.0,0.0,0.0],1)
-						G.car["jump"] = 0
 			## Spacebar
 			elif key[0] == K.SPACEKEY:
 				# hackish Brake
@@ -174,7 +164,17 @@ def keyHandler():
 					G.car["force"]  = 20.0
 				if G.car["speed"] < -2.0:
 					G.car["force"]  = -20.0
-
+	for key in keys:
+		## F
+		if key[0] == K.FKEY:
+			if key[1] == 1:
+				# re-orient car
+				if G.car["jump"] > 2.0:
+					G.car.position = (G.car.worldPosition[0], G.car.worldPosition[1], G.car.worldPosition[2]+3.0)
+					G.car.alignAxisToVect([0.0,0.0,1.0], 2, 1.0)
+					G.car.setLinearVelocity([0.0,0.0,0.0],1)
+					G.car.setAngularVelocity([0.0,0.0,0.0],1)
+					G.car["jump"] = 0	
 
 ## called from Menu Camera
 def initGUI():
