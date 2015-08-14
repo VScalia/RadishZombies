@@ -12,7 +12,7 @@ Radish's Zombie Game
 
 1. Clone the repository to a folder of your choice
 2. Run blender as admin (if on windows)
-3. Go to open and select the folder then game master
+3. Go to open and select the folder then game master (Due to a bug start in levels/level 1/l1_master.blend)
 4. Press the "P" key to start playing
 5. ???
 6. Profit!
